@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
 const limiter = require('./utils/limiter');
+const { errorLogger, requestLogger } = require('./middlewares/logger');
 
 const routes = require('./routes');
 
@@ -23,8 +24,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // для приёма ве�
 app.use(helmet()); // мидлвэр автоматически проставляет заголовки без-ти Content-Security-Policy
 app.use(limiter); // мидлвэр ограничения количества запросов с одного IP
 
+app.use(requestLogger);
+
 app.use(routes);
 
+app.use(errorLogger);
 app.use(errors()); // обработчик ошибок celebrate
 
 app.listen(PORT);
