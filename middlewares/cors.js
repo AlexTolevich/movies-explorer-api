@@ -1,10 +1,9 @@
 const allowedCors = [
   'localhost:3000',
-  // 'http://mestechko.nomoredomains.xyz',
-  // 'https://mestechko.nomoredomains.xyz',
-  // 'http://api.mestechko.nomoredomains.work',
-  // 'https://api.mestechko.nomoredomains.work',
-
+  'http://movies.kuznetsov.nomoredomains.work',
+  'https://movies.kuznetsov.nomoredomains.work',
+  'http://api.movies.kuznetsov.nomoredomains.work/',
+  'https://api.movies.kuznetsov.nomoredomains.work/',
 ];
 
 const cors = (req, res, next) => {
