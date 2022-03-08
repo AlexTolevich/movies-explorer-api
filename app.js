@@ -38,6 +38,4 @@ app.use(routes);
 app.use(errors()); // обработчик ошибок celebrate
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`${PORT}`);
-});
+app.listen(PORT);
