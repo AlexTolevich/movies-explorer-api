@@ -36,10 +36,12 @@ const postMovie = (req, res, next) => {
     movieId,
     nameRU,
     nameEN,
+    owner: req.user._id,
   })
     .then((movie) => res.status(200).send(movie))
     .catch((err) => {
       if (err.name === 'ValidationError') {
+        console.log(err);
         next(new BadRequest('Переданы некорректные данные при создании фильма.'));
       } else {
         next(err);
