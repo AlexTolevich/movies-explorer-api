@@ -1,8 +1,8 @@
 const allowedCors = [
   'http://movies.kuznetsov.nomoredomains.work',
   'https://movies.kuznetsov.nomoredomains.work',
-  'http://api.movies.kuznetsov.nomoredomains.work/',
-  'https://api.movies.kuznetsov.nomoredomains.work/',
+  'http://api.movies.kuznetsov.nomoredomains.work',
+  'https://api.movies.kuznetsov.nomoredomains.work',
 ];
 
 const cors = (req, res, next) => {
