@@ -1,5 +1,4 @@
 const allowedCors = [
-  'localhost:3000',
   'http://movies.kuznetsov.nomoredomains.work',
   'https://movies.kuznetsov.nomoredomains.work',
   'http://api.movies.kuznetsov.nomoredomains.work/',
